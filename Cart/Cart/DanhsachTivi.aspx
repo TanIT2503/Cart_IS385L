@@ -100,7 +100,7 @@
             <div class=" justify-content-right text-left">
                 <div class="contents pt-3">
                     <div class="contents pt-0-5">
-                        <h2 class="pt-3">TIVI NỔI BẬT NHẤT
+                        <h2 class="pt-3">TẤT CẢ TIVI
                         </h2>
                     </div>
                     <asp:DataList ID="DataList2" runat="server" DataKeyField="Masp" DataSourceID="SqlDataSource3" BorderRadius="15px" BackColor="White" BorderColor="White" BorderWidth="2px" CellPadding="6" CellSpacing="6" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px" OnItemCommand="SelectedIndex" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
