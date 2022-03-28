@@ -48,8 +48,7 @@
         <section class="h-100 h-custom" style="background-color: #eee;">
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center ">
-                    <asp:DataList ID="DataList2" runat="server" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyField="MADONHANG" DataSourceID="CART" GridLines="Both" Width="1450px" OnSelectedIndexChanged="DataList3_SelectedIndexChanged">
-                        <ItemTemplate>
+                    
                             <div class="col">
                                 <div class="card">
                                     <div class="card-body p-4">
@@ -65,6 +64,8 @@
                                                         <p class="mb-0">You have 4 items in your cart</p>
                                                     </div>
                                                 </div>
+                                                <asp:DataList ID="DataList2" runat="server" BackColor="White" BorderColor="White" BorderStyle="None" BorderWidth="0px" CellPadding="4" DataKeyField="MADONHANG" DataSourceID="CART" GridLines="Both" Width="600px" OnItemCommand="del_pro" OnSelectedIndexChanged="DataList3_SelectedIndexChanged">
+                                                   <ItemTemplate>
                                                 <div class="card mb-3">
                                                     <div class="card-body">
                                                         <div class="d-flex justify-content-between">
@@ -79,18 +80,23 @@
                                                             </div>
                                                             <div class="d-flex flex-row align-items-center">
                                                                 <div style="width: 50px;">
-                                                                    <h5 class="fw-normal mb-0">2</h5>
+                                                                    <h5 class="fw-normal mb-0"><asp:Label ID="SOLUONGLabel" runat="server" Text='<%# Eval("SOLUONG") %>' /></h5>
                                                                 </div>
                                                                 <div style="width: 80px;">
                                                                     <h5 class="mb-0">
                                                                         <asp:Label ID="DONGIALabel" runat="server" Text='<%# Eval("DONGIA") %>' /></h5>
                                                                 </div>
-                                                                <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
+                                                                
+                                                                    <asp:Button ID="btnXoaSp" runat="server" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip" Text="X" CommandName="Delete_command"/>
+
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            </ItemTemplate>
+                                            </asp:DataList>
+                                                </div>
                                             <div class="col-lg-5">
                                                 <div class="card bg-primary text-white rounded-3">
                                                     <div class="card-body">
@@ -142,15 +148,17 @@
 
                                                         <hr class="my-4">
 
-                                                        <div class="d-flex justify-content-between">
-                                                            <p class="mb-2">Tổng tiền(Chưa tính thuế)</p>
-                                                            <asp:Label ID="lbSubTotal" Class="pl-3" runat="server"></asp:Label>
-                                                        </div>
-                                                        <div class="d-flex justify-content-between mb-4">
-                                                            <p class="mb-2">Tổng tiền(Incl. taxes)</p>
-                                                            <asp:Label ID="lbTotal" Class="pl-3" runat="server"></asp:Label>
-                                                        </div>
 
+                                                        <div class="d-flex justify-content-between pb-3">
+                                                            <asp:DataList ID="DataList1" runat="server" DataSourceID="SUM">
+                                                        <ItemTemplate>
+                                                            <p class="mb-2">Tổng tiền</p>
+                                                            <asp:Label ID="TONGTIENLabel" runat="server" Text='<%# Eval("column1") %>' />
+                                                        </ItemTemplate>
+                                                    </asp:DataList>
+                                                    <asp:SqlDataSource ID="SUM" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT SUM(TONGTIEN)FROM CART;"></asp:SqlDataSource>
+                                                        
+                                                        </div>
                                                         <button type="button" class="btn btn-info btn-block btn-lg">
                                                             <div class="d-flex justify-content-between">
                                                                 <asp:Label ID="lbThanhToan" Class="pl-3" runat="server"></asp:Label>
@@ -167,13 +175,16 @@
                                     </div>
                                 </div>
                             </div>
-                        </ItemTemplate>
-                    </asp:DataList>
+                        
                 </div>
             </div>
         </section>
-        <asp:SqlDataSource ID="CART" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [MADONHANG], [ANHSP], [TENSP], [DONGIA], [SOLUONG], [TONGTIEN] FROM [CART]"></asp:SqlDataSource>
-
+        <div>
+             <asp:SqlDataSource ID="CART" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [MADONHANG], [ANHSP], [TENSP], [DONGIA], [SOLUONG], [TONGTIEN] FROM [CART]" >
+               
+        </asp:SqlDataSource>
+        </div>
+        
         <div class="pt-5">
             <footer class="bg-dark text-center text-white pt-3">
                 <!-- Grid container -->

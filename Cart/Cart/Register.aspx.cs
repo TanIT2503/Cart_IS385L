@@ -21,11 +21,11 @@ namespace Cart
             //ket noi dl
             String url = Server.MapPath("App_Data/CART_IS385L.mdf");
             String strconn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + url + ";Integrated Security = True";
-
+            /*
             string path = Server.MapPath("App_Data/CART_IS385L.mdf");
             SqlConnection connect = new SqlConnection();
             connect.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename = " + path + ";Integrated Security=True ";
-            connect.Open();
+            connect.Open();*/
 
             // Sử dụng đối tượng kết nối SQL
             SqlConnection con = new SqlConnection();

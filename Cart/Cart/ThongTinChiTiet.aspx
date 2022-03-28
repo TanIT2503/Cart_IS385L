@@ -175,9 +175,10 @@
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <button id="btnAddToCart" type="button" class="btn btn-primary">
-                        <i class="fa-regular fa-cart-circle-check"></i>
-                        Thêm vào giỏ hàng</button>
+                    <asp:TextBox ID="txtSoLuong" class="form-control" placeholder="Nhập số lượng cần đặt" aria-label="SoLuong" runat="server" Width="300px"></asp:TextBox>
+                    <asp:Button ID="btnAddToCart" class="btn btn-primary" runat="server" Text="Thêm vào giỏ hàng" OnClick="btnAddToCart_Click" />
+                        <i class="fa-regular fa-cart-circle-check"></i></button>
+                   
                 </div>
             </div>
         </div>

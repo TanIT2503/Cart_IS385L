@@ -44,7 +44,7 @@
                     <div class="contents pt-0-5">
                         <img src="Images/Content/dmxd-1200x90.png" style="width: 1336px; height: 100px" />
                     </div>
-                    <asp:DataList ID="DataList3" runat="server" DataKeyField="Masp" DataSourceID="SqlDataSource2" BorderRadius="15px" BackColor="#EB018A" BorderColor="#EB018A" BorderWidth="2px" CellPadding="6" CellSpacing="6" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px" OnItemCommand="SelectedIndex" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
+                    <asp:DataList ID="DataList3" runat="server" DataKeyField="Masp" DataSourceID="SqlDataSource2" BorderRadius="15px" BackColor="#EB018A" BorderColor="#EB018A" BorderWidth="2px" CellPadding="6" CellSpacing="6" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px" OnItemCommand="SelectedIndex1" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
                         <ItemTemplate>
                             <div class="card-deck">
                                 <div class="card zoom" style="height: 300px">
@@ -74,7 +74,7 @@
                         <h2 class="pt-3">TIVI NỔI BẬT NHẤT
                         </h2>
                     </div>
-                    <asp:DataList ID="DataList1" runat="server" DataKeyField="Masp" DataSourceID="SqlDataSource1" BorderRadius="15px" BackColor="White" BorderColor="White" BorderWidth="2px" CellPadding="6" CellSpacing="6" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px" OnItemCommand="SelectedIndex" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
+                    <asp:DataList ID="DataList1" runat="server" DataKeyField="Masp" DataSourceID="SqlDataSource1" BorderRadius="15px" BackColor="White" BorderColor="White" BorderWidth="2px" CellPadding="6" CellSpacing="6" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px" OnItemCommand="SelectedIndex2" OnSelectedIndexChanged="DataList2_SelectedIndexChanged">
                         <ItemTemplate>
                             <div class="card-deck">
                                 <div class="card zoom" style="height: 300px">
@@ -100,10 +100,10 @@
             <div class=" justify-content-right text-left">
                 <div class="contents pt-3">
                     <div class="contents pt-0-5">
-                        <h2 class="pt-3">TIVI NỔI BẬT NHẤT
+                        <h2 class="pt-3">TẤT CẢ TIVI
                         </h2>
                     </div>
-                    <asp:DataList ID="DataList2" runat="server" DataKeyField="Masp" DataSourceID="SqlDataSource3" BorderRadius="15px" BackColor="White" BorderColor="White" BorderWidth="2px" CellPadding="6" CellSpacing="6" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px" OnItemCommand="SelectedIndex" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
+                    <asp:DataList ID="DataList2" runat="server" DataKeyField="Masp" DataSourceID="SqlDataSource3" BorderRadius="15px" BackColor="White" BorderColor="White" BorderWidth="2px" CellPadding="6" CellSpacing="6" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px" OnItemCommand="SelectedIndex3" OnSelectedIndexChanged="DataList3_SelectedIndexChanged">
                         <ItemTemplate>
                             <div class="card-deck">
                                 <div class="card zoom" style="height: 300px">
