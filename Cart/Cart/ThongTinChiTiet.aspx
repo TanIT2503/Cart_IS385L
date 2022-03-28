@@ -38,7 +38,7 @@
                 </div>
             </div>
         </nav>
-        <div class="container-fluid" style="width: 95%; margin-top: 2%">
+        <div class="container-fluid pl-5" style="width: 95%; margin-top: 2%">
             <div class="row">
                 <div class="cod-md-10">
                     <div class=" justify-content-center text-left">
@@ -47,9 +47,9 @@
                             <asp:Label ID="Label2" runat="server" ForeColor="White"></asp:Label>
                             <asp:DataList ID="DataList1" runat="server" DataSourceID="QUERY_SELECT" RepeatColumns="1" RepeatDirection="Horizontal">
                                 <ItemTemplate>
-                                    <div class="card mb-3 pl-5" style="max-width: 840px; max-height: 1000px">
+                                    <div class="card mb-3 pl-5" style="max-width: 1640px; max-height: 1000px">
                                         <div class="row g-0">
-                                            <div class="col-md-6">
+                                            <div class="col-md-6 p-3">
                                                 <asp:Image ID="Image1" class="img-fluid rounded-start" runat="server" Height="335px" ImageUrl='<%# Eval("HinhAnh") %>' Width="335px" /><br />
                                             </div>
                                             <div class="col-md-6">
@@ -91,9 +91,9 @@
                     <div class=" justify-content-right text-left">
                         <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="1" RepeatDirection="Horizontal">
                             <ItemTemplate>
-                                <div class="card mb-3 pl-5" style="max-width: 840px; max-height: 1000px">
+                                <div class="card mb-3 pl-5" style="max-width: 1340px; max-height: 1000px">
                                     <div class="row g-0">
-                                        <div class="col-md-6">
+                                        <div class="col-md-6 p-3">
                                             <asp:Image ID="Image1" class="img-fluid rounded-start" runat="server" Height="335px" ImageUrl='<%# Eval("HinhAnh") %>' Width="549px" /><br />
                                         </div>
                                         <div class="col-md-6">
@@ -132,9 +132,9 @@
                     <div class=" justify-content-right text-left">
                         <asp:DataList ID="DataList3" runat="server" DataSourceID="SqlDataSource2" RepeatColumns="1" RepeatDirection="Horizontal">
                             <ItemTemplate>
-                                <div class="card mb-3 pl-5" style="max-width: 840px; max-height: 1000px">
+                                <div class="card mb-3 pl-5" style="max-width: 1340px; max-height: 1000px">
                                     <div class="row g-0">
-                                        <div class="col-md-6">
+                                        <div class="col-md-6 p-3">
                                             <asp:Image ID="Image1" class="img-fluid rounded-start" runat="server" Height="335px" ImageUrl='<%# Eval("ANHSP") %>' Width="503px" /><br />
                                         </div>
                                         <div class="col-md-6">

@@ -108,7 +108,7 @@
                     <asp:DataList ID="DataList1" BorderRadius="15px" runat="server" DataKeyField="MASP" BackColor="#023f88" BorderColor="#023f88" BorderWidth="2px" CellPadding="6" CellSpacing="6" DataSourceID="PRODUCTS" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px" OnItemCommand="SelectedIndex1" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
                         <ItemTemplate>
                             <div class="card-deck">
-                                <div class="card zoom" style="height: 300px">
+                                <div class="card zoom" style="height: 400px">
                                     <div class="imgs pt-3">
                                         <asp:ImageButton ID="ImageButton1" runat="server" CommandName="redirect" Height="139px" Width="208px" ImageUrl='<%# Eval("ANHSP") %>' />
                                     </div>
