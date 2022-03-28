@@ -45,126 +45,125 @@
                 </div>
             </div>
         </nav>
-
-        <section class="h-100 gradient-custom">
-            <div class="container py-5">
-                <div class="row d-flex justify-content-center my-4">
-                    <asp:DataList ID="DataList1" runat="server" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyField="MADONHANG" DataSourceID="CART" GridLines="Both" Width="1450px" OnSelectedIndexChanged="DataList3_SelectedIndexChanged">
+        <section class="h-100 h-custom" style="background-color: #eee;">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center ">
+                    <asp:DataList ID="DataList2" runat="server" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyField="MADONHANG" DataSourceID="CART" GridLines="Both" Width="1450px" OnSelectedIndexChanged="DataList3_SelectedIndexChanged">
                         <ItemTemplate>
-                            <div class="col-md-8">
-                                <div class="card mb-4">
-                                    <div class="card-header py-3">
-                                        <h5 class="mb-0">Cart - 2 items</h5>
-                                    </div>
-                                    <div class="card-body">
-                                        <!-- Single item -->
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body p-4">
+
                                         <div class="row">
-                                            <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
-                                                <!-- Image -->
-                                                <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
-                                                    <asp:ImageButton ID="ImageButton1" runat="server" CommandName="redirect" Height="139px" Width="208px" ImageUrl='<%# Eval("ANHSP") %>' />
-                                                    <a href="#!">
-                                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
-                                                    </a>
-                                                </div>
-                                                <!-- Image -->
-                                            </div>
-
-                                            <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
-                                                <!-- Data -->
-                                                <strong>
-                                                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("TENSP") %>' /></strong>
-                                                <button type="button" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip"
-                                                    title="Remove item">
-                                                    <i class="fas fa-trash"></i>
-                                                </button>
-
-                                                <!-- Data -->
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                                                <!-- Quantity -->
-                                                <div class="d-flex mb-4" style="max-width: 300px">
-
-                                                    <div class="form-outline">
-                                                        <asp:TextBox ID="TextBox1" min="0" name="quantity" value="1" type="number" class="form-control" runat="server"></asp:TextBox>
-                                                        <label class="form-label" for="form1">Quantity</label>
+                                            <div class="col-lg-7">
+                                                <h5 class="mb-3"><a href="/home" class="text-body"><i
+                                                    class="fas fa-long-arrow-alt-left me-2"></i>Tiếp tục mua hàng</a></h5>
+                                                <hr>
+                                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                                    <div>
+                                                        <p class="mb-1">Giỏ Hàng</p>
+                                                        <p class="mb-0">You have 4 items in your cart</p>
                                                     </div>
-
-
                                                 </div>
-                                                <!-- Quantity -->
-
-                                                <!-- Price -->
-                                                <p class="text-start text-md-center">
-                                                    <strong>
-                                                        <asp:Label ID="DONGIALabel" runat="server" Text='<%# Eval("DONGIA") %>' /></strong>
-                                                </p>
-                                                <!-- Price -->
+                                                <div class="card mb-3">
+                                                    <div class="card-body">
+                                                        <div class="d-flex justify-content-between">
+                                                            <div class="d-flex flex-row align-items-center">
+                                                                <div>
+                                                                    <asp:ImageButton ID="ImageButton1" class="img-fluid rounded-3" runat="server" CommandName="redirect" Width="65px" ImageUrl='<%# Eval("ANHSP") %>' />
+                                                                </div>
+                                                                <div class="ms-3">
+                                                                    <h5>
+                                                                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("TENSP") %>' /></strong></h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex flex-row align-items-center">
+                                                                <div style="width: 50px;">
+                                                                    <h5 class="fw-normal mb-0">2</h5>
+                                                                </div>
+                                                                <div style="width: 80px;">
+                                                                    <h5 class="mb-0">
+                                                                        <asp:Label ID="DONGIALabel" runat="server" Text='<%# Eval("DONGIA") %>' /></h5>
+                                                                </div>
+                                                                <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <!-- Single item -->
+                                            <div class="col-lg-5">
+                                                <div class="card bg-primary text-white rounded-3">
+                                                    <div class="card-body">
+                                                        <div class="d-flex justify-content-between align-items-center mb-4">
+                                                            <h5 class="mb-0">Thông tin thẻ</h5>
 
-                                        <hr class="my-4" />
+                                                        </div>
 
+                                                        <p class="small mb-2">Loại thẻ</p>
+                                                        <a href="#!" type="submit" class="text-white"><i
+                                                            class="fab fa-cc-mastercard fa-2x me-2"></i></a>
+                                                        <a href="#!" type="submit" class="text-white"><i
+                                                            class="fab fa-cc-visa fa-2x me-2"></i></a>
+                                                        <a href="#!" type="submit" class="text-white"><i
+                                                            class="fab fa-cc-amex fa-2x me-2"></i></a>
+                                                        <a href="#!" type="submit" class="text-white"><i class="fab fa-cc-paypal fa-2x"></i></a>
 
-                                    </div>
-                                </div>
-                                <div class="card mb-4">
-                                    <div class="card-body">
-                                        <p><strong>Expected shipping delivery</strong></p>
-                                        <p class="mb-0">12.10.2020 - 14.10.2020</p>
-                                    </div>
-                                </div>
-                                <div class="card mb-4 mb-lg-0">
-                                    <div class="card-body">
-                                        <p><strong>We accept</strong></p>
-                                        <img class="me-2" width="45px"
-                                            src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
-                                            alt="Visa" />
-                                        <img class="me-2" width="45px"
-                                            src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
-                                            alt="American Express" />
-                                        <img class="me-2" width="45px"
-                                            src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
-                                            alt="Mastercard" />
-                                        <img class="me-2" width="45px"
-                                            src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.webp"
-                                            alt="PayPal acceptance mark" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card mb-4">
-                                    <div class="card-header py-3">
-                                        <h5 class="mb-0">Summary</h5>
-                                    </div>
-                                    <div class="card-body">
-                                        <ul class="list-group list-group-flush">
-                                            <li
-                                                class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">Products
-                 <span>
-                     <asp:Label ID="Label3" runat="server" Text='<%# Eval("TONGTIEN") %>' /></span>
-                                            </li>
-                                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">Shipping
-                <span>Gratis</span>
-                                            </li>
-                                            <li
-                                                class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
-                                                <div>
-                                                    <strong>Total amount</strong>
-                                                    <strong>
-                                                        <p class="mb-0">(including VAT)</p>
-                                                    </strong>
+                                                        <form class="mt-4">
+                                                            <div class="form-outline form-white mb-4">
+                                                                <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
+                                                                    placeholder="Cardholder's Name" />
+                                                                <label class="form-label" for="typeName">Tên chủ thẻ</label>
+                                                            </div>
+
+                                                            <div class="form-outline form-white mb-4">
+                                                                <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
+                                                                    placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" />
+                                                                <label class="form-label" for="typeText">Số thẻ</label>
+                                                            </div>
+
+                                                            <div class="row mb-4">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-outline form-white">
+                                                                        <input type="text" id="typeExp" class="form-control form-control-lg"
+                                                                            placeholder="MM/YYYY" size="7" id="exp" minlength="7" maxlength="7" />
+                                                                        <label class="form-label" for="typeExp">Ngày hết hạn</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-outline form-white">
+                                                                        <input type="password" id="typeText" class="form-control form-control-lg"
+                                                                            placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
+                                                                        <label class="form-label" for="typeText">Cvv</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </form>
+
+                                                        <hr class="my-4">
+
+                                                        <div class="d-flex justify-content-between">
+                                                            <p class="mb-2">Tổng tiền(Chưa tính thuế)</p>
+                                                            <asp:Label ID="lbSubTotal" Class="pl-3" runat="server"></asp:Label>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between mb-4">
+                                                            <p class="mb-2">Tổng tiền(Incl. taxes)</p>
+                                                            <asp:Label ID="lbTotal" Class="pl-3" runat="server"></asp:Label>
+                                                        </div>
+
+                                                        <button type="button" class="btn btn-info btn-block btn-lg">
+                                                            <div class="d-flex justify-content-between">
+                                                                <asp:Label ID="lbThanhToan" Class="pl-3" runat="server"></asp:Label>
+                                                                <span>Thanh Toán <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
+                                                            </div>
+                                                        </button>
+
+                                                    </div>
                                                 </div>
-                                                <span><strong>
-                                                    <asp:Label ID="Label4" runat="server" Text='<%# Eval("TONGTIEN") %>' /></strong></span>
-                                            </li>
-                                        </ul>
 
-                                        <button type="button" class="btn btn-primary btn-lg btn-block">
-                                            Go to checkout
-                                        </button>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>

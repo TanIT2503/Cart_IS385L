@@ -19,5 +19,6 @@ namespace Cart
             Session["FIND"] = txtSearch.Text;
             Response.Redirect("TimKiem.aspx");
         }
+
     }
 }
