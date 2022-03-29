@@ -32,9 +32,11 @@
                     <asp:Label ID="user" Class="pl-3" runat="server"></asp:Label>
                 </div>
                 <div class="form-inline my-2 my-lg-0 pl-5">
-                    <button type="button" class="btn btn-primary">
-                        <i class="fa-solid fa-cart-shopping fa-xl pr-2"></i>
-                        Giỏ Hàng</button>
+                    <a href="/GioHang.aspx">
+                        <button type="button" class="btn btn-primary">
+                            <i class="fa-solid fa-cart-shopping fa-xl pr-2"></i>
+                            Giỏ Hàng</button>
+                    </a>
                 </div>
             </div>
         </nav>
