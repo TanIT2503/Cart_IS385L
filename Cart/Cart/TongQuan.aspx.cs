@@ -11,7 +11,7 @@ namespace Cart
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["FULLNAME"] = null;
         }
         protected void SelectedIndex1(object source, DataListCommandEventArgs e)//lapTops
         {

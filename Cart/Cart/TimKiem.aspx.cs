@@ -12,6 +12,15 @@ namespace Cart
         protected void Page_Load(object sender, EventArgs e)
         {
             Label1.Text = Session["FIND"].ToString();
+            if (Session["FULLNAME"] != null)//username lấy từ trang login
+            {
+                user.Text = Session["FULLNAME"].ToString();
+                Session["FULLNAME"] = user.Text;
+            }
+            else
+            {
+                Session["FULLNAME"] = null;
+            }
         }
         protected void TimKiemDienThoai(object source, DataListCommandEventArgs e)
         {
