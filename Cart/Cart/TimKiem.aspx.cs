@@ -19,6 +19,7 @@ namespace Cart
             {
                 Label2.Text = DataList1.DataKeys[e.Item.ItemIndex].ToString();
                 Session["ID"] = Label2.Text;
+                Session["LOAI"] = "DienThoai";
                 Response.Redirect("ThongTinChiTiet.aspx");
             }
         }
@@ -28,6 +29,7 @@ namespace Cart
             {
                 Label2.Text = DataList2.DataKeys[e.Item.ItemIndex].ToString();
                 Session["ID"] = Label2.Text;
+                Session["LOAI"] = "LapTops";
                 Response.Redirect("ThongTinChiTiet.aspx");
             }
         }
@@ -37,6 +39,7 @@ namespace Cart
             {
                 Label2.Text = DataList3.DataKeys[e.Item.ItemIndex].ToString();
                 Session["ID"] = Label2.Text;
+                Session["LOAI"] = "TiVi";
                 Response.Redirect("ThongTinChiTiet.aspx");
             }
         }

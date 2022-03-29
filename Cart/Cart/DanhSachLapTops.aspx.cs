@@ -11,7 +11,8 @@ namespace Cart
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            user.Text = Session["FULLNAME"].ToString();
+            Session["FULLNAME"] = user.Text;
         }
         protected void SelectedIndex1(object source, DataListCommandEventArgs e)
         {

@@ -11,32 +11,36 @@ namespace Cart
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //user.Text = Session["FULLNAME"].ToString();
+            user.Text = Session["FULLNAME"].ToString();
+            Session["FULLNAME"] = user.Text;
         }
-        protected void SelectedIndex1(object source, DataListCommandEventArgs e)
+        protected void SelectedIndex1(object source, DataListCommandEventArgs e)//LapTops
         {
             if (e.CommandName == "redirect")
             {
                 Label1.Text = DataList1.DataKeys[e.Item.ItemIndex].ToString();
                 Session["ID"] = Label1.Text;
+                Session["LOAI"] = "LapTops";
                 Response.Redirect("ThongTinChiTiet.aspx");
             }
         }
-        protected void SelectedIndex2(object source, DataListCommandEventArgs e)
+        protected void SelectedIndex2(object source, DataListCommandEventArgs e)//DienThoai
         {
             if (e.CommandName == "redirect")
             {
                 Label1.Text = DataList2.DataKeys[e.Item.ItemIndex].ToString();
                 Session["ID"] = Label1.Text;
+                Session["LOAI"] = "DienThoai";
                 Response.Redirect("ThongTinChiTiet.aspx");
             }
         }
-        protected void SelectedIndex3(object source, DataListCommandEventArgs e)
+        protected void SelectedIndex3(object source, DataListCommandEventArgs e)//TiVi
         {
             if (e.CommandName == "redirect")
             {
                 Label1.Text = DataList3.DataKeys[e.Item.ItemIndex].ToString();
                 Session["ID"] = Label1.Text;
+                Session["LOAI"] = "TiVi";
                 Response.Redirect("ThongTinChiTiet.aspx");
             }
         }

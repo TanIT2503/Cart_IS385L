@@ -27,14 +27,16 @@
                     <asp:TextBox ID="txtSearch" class="form-control" placeholder="Thông tin tìm kiếm" aria-label="Search" runat="server" Width="500px"></asp:TextBox>
                     <asp:Button ID="btnSearch" class="btn btn-primary" runat="server" Text="Tìm kiếm" Height="38px" Width="120px" OnClick="btnSearch_Click" />
                 </div>
-                <div class="form-inline my-2 my-lg-0 pl-5">
+                 <div class="form-inline my-2 my-lg-0 pl-5" style="color: white">
                     <i class="fa-regular fa-circle-user fa-2xl"></i>
-                    <asp:Label ID="user" Class="pl-3" runat="server"></asp:Label>
+                    <asp:Label ID="user" Class="pl-3" runat="server" ForeColor="White"></asp:Label>
                 </div>
                 <div class="form-inline my-2 my-lg-0 pl-5">
-                    <button type="button" class="btn btn-primary">
-                        <i class="fa-solid fa-cart-shopping fa-xl pr-2"></i>
-                        Giỏ Hàng</button>
+                    <a href="/GioHang.aspx">
+                        <button type="button" class="btn btn-primary">
+                            <i class="fa-solid fa-cart-shopping fa-xl pr-2"></i>
+                            Giỏ Hàng</button>
+                    </a>
                 </div>
             </div>
         </nav>
