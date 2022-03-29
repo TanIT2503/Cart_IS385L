@@ -13,6 +13,15 @@ namespace Cart
         protected void Page_Load(object sender, EventArgs e)
         {
             Label1.Text = Session["ID"].ToString();
+            if (Session["FULLNAME"] != null)//username lấy từ trang login
+            {
+                user.Text = Session["FULLNAME"].ToString();
+                Session["FULLNAME"] = user.Text;
+            }
+            else
+            {
+                Session["FULLNAME"] = null;
+            }
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
@@ -30,7 +39,7 @@ namespace Cart
             String url = Server.MapPath("App_Data/CART_IS385L.mdf");
             String strconn =
                 @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = " + url + ";Integrated Security=True";
-            
+
             // Sử dụng đối tượng kết nối SQL
             SqlConnection con = new SqlConnection();
             con.ConnectionString = strconn;

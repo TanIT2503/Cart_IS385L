@@ -13,8 +13,15 @@ namespace Cart
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            user.Text = Session["FULLNAME"].ToString();
-            Session["FULLNAME"] = user.Text;
+            if (Session["FULLNAME"] != null)//username lấy từ trang login
+            {
+                user.Text = Session["FULLNAME"].ToString();
+                Session["FULLNAME"] = user.Text;
+            }
+            else
+            {
+                Session["FULLNAME"] = null;
+            }
         }
         protected void SelectedIndex1(object source, DataListCommandEventArgs e)
         {

@@ -12,7 +12,15 @@ namespace Cart
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["FULLNAME"] != null)//username lấy từ trang login
+            {
+                user.Text = Session["FULLNAME"].ToString();
+                Session["FULLNAME"] = user.Text;
+            }
+            else
+            {
+                Session["FULLNAME"] = null;
+            }
         }
         protected void del_pro(object source, DataListCommandEventArgs e)//ham xoa dư lieu khoi bang
         {
@@ -43,6 +51,25 @@ namespace Cart
         protected void DataList3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            Session["FIND"] = txtSearch.Text;
+            Response.Redirect("TimKiem.aspx");
+        }
+
+        protected void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            if (Session["FULLNAME"] != null)//username lấy từ trang login
+            {
+                user.Text = Session["FULLNAME"].ToString();
+                Session["FULLNAME"] = user.Text;
+            }
+            else
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
     }
 }

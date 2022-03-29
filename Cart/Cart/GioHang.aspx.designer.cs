@@ -78,13 +78,13 @@ namespace Cart
         protected global::System.Web.UI.WebControls.SqlDataSource SUM;
 
         /// <summary>
-        /// lbThanhToan control.
+        /// btnThanhToan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbThanhToan;
+        protected global::System.Web.UI.WebControls.Button btnThanhToan;
 
         /// <summary>
         /// CART control.

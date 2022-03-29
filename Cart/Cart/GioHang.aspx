@@ -30,12 +30,13 @@
                 </div>
                 <div class="form-inline my-2 my-lg-0 pl-3">
                     <asp:TextBox ID="txtSearch" class="form-control" placeholder="Thông tin tìm kiếm" aria-label="Search" runat="server" Width="500px"></asp:TextBox>
-                    <asp:Button ID="btnSearch" class="btn btn-primary" runat="server" Text="Tìm kiếm" Height="38px" Width="120px" />
+                    <asp:Button ID="btnSearch" class="btn btn-primary" runat="server" Text="Tìm kiếm" Height="38px" Width="120px" OnClick="btnSearch_Click" />
                 </div>
-                <div class="form-inline my-2 my-lg-0 pl-5">
+                <div class="form-inline my-2 my-lg-0 pl-5" style="color: white">
                     <i class="fa-regular fa-circle-user fa-2xl"></i>
-                    <asp:Label ID="user" Class="pl-3" runat="server"></asp:Label>
+                    <asp:Label ID="user" Class="pl-3" runat="server" ForeColor="White"></asp:Label>
                 </div>
+
                 <div class="form-inline my-2 my-lg-0 pl-5">
                     <a href="/GioHang.aspx">
                         <button type="button" class="btn btn-primary">
@@ -160,12 +161,7 @@
                                                     <asp:SqlDataSource ID="SUM" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT SUM(TONGTIEN)FROM CART;"></asp:SqlDataSource>
 
                                                 </div>
-                                                <button type="button" class="btn btn-info btn-block btn-lg">
-                                                    <div class="d-flex justify-content-between">
-                                                        <asp:Label ID="lbThanhToan" Class="pl-3" runat="server"></asp:Label>
-                                                        <span>Thanh Toán <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
-                                                    </div>
-                                                </button>
+                                                <asp:Button ID="btnThanhToan" runat="server" class="btn btn-info btn-block btn-lg" data-mdb-toggle="tooltip" Text="Thanh Toán" OnClick="btnThanhToan_Click" />
 
                                             </div>
                                         </div>
