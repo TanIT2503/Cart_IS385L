@@ -74,15 +74,24 @@
                                                                 </div>
                                                             </div>
                                                             <div class="d-flex flex-row align-items-center">
-                                                                <div style="width: 50px;">
+                                                                <div style="width: 50px;" class="pr-3">
+                                                                    <div class="pr-2">
+                                                                        <asp:Button ID="minus" runat="server" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip" Text=" - " CommandName="Update_minus" />
+                                                                    </div>
                                                                     <h5 class="fw-normal mb-0">
-                                                                        <asp:Label ID="SOLUONGLabel" runat="server" Text='<%# Eval("SOLUONG") %>' /></h5>
+                                                                        <asp:TextBox ID="txtSOLUONG" class="form-control" runat="server" Text='<%# Eval("SOLUONG") %>'></asp:TextBox>
+                                                                    </h5>
+                                                                    <div class="pr-2">
+                                                                        <asp:Button ID="plus" runat="server" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip" Text=" + " CommandName="Update_plus" />
+                                                                    </div>
                                                                 </div>
-                                                                <div style="width: 80px;">
+                                                                <div style="width: 90px;">
                                                                     <h5 class="mb-0">
                                                                         <asp:Label ID="DONGIALabel" runat="server" Text='<%# Eval("DONGIA") %>' /></h5>
                                                                 </div>
-
+                                                                <div class="pr-2">
+                                                                    <asp:Button ID="btnCapNhat" runat="server" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip" Text="Cập nhật" CommandName="Update_command" />
+                                                                </div>
                                                                 <asp:Button ID="btnXoaSp" runat="server" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip" Text="X" CommandName="Delete_command" />
 
                                                             </div>

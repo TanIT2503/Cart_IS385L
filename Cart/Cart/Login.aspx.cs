@@ -42,10 +42,11 @@ namespace Cart
                 {
                     matkhau.Close();
                     var test = chon1.ExecuteReader();
-                    string sess= "Chưa đăng nhập";
+                    string sess = "";
+                    string mail = "";
                     if (test.HasRows)
                     {
-                        user.Close();test.Close();
+                        user.Close(); test.Close();
                         // Tạo đối tượng SqlCommand
                         SqlCommand command = new SqlCommand();
                         command.Connection = connect;
@@ -56,7 +57,7 @@ namespace Cart
 
                         // Thi hành truy vấn trả về SqlReader
                         SqlDataReader reader = command.ExecuteReader();
-                        
+
                         // Kiểm tra có kết quả trả về
                         if (reader.HasRows)
                         {
@@ -64,12 +65,15 @@ namespace Cart
                             while (reader.Read())
                             {
                                 string mota = reader.GetString(2);
+                                string em = reader.GetString(0);
                                 sess = mota;
+                                mail = em;
                             }
                         }
                         reader.Close();
                     }
-                    Session["FullName"] = sess;
+                    Session["FULLNAME"] = sess;
+                    Session["EMAIL"] = mail;
                     Response.Redirect("Home.aspx");
                     Thread.Sleep(3000);
                 }
