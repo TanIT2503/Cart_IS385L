@@ -59,12 +59,6 @@
                                         <h5 class="mb-3"><a href="/home" class="text-body"><i
                                             class="fas fa-long-arrow-alt-left me-2"></i>Tiếp tục mua hàng</a></h5>
                                         <hr style="width: 700px">
-                                        <div class="d-flex justify-content-between align-items-center mb-4">
-                                            <div>
-                                                <p class="mb-1">Giỏ Hàng</p>
-                                                <p class="mb-0">You have 4 items in your cart</p>
-                                            </div>
-                                        </div>
                                         <asp:DataList ID="DataList2" runat="server" BackColor="White" BorderColor="White" BorderStyle="None" BorderWidth="0px" CellPadding="4" DataKeyField="MADONHANG" DataSourceID="CART" GridLines="Both" Width="600px" OnItemCommand="del_pro" OnSelectedIndexChanged="DataList3_SelectedIndexChanged">
                                             <ItemTemplate>
                                                 <div class="card mb-3" style="width: 670px">
@@ -161,8 +155,8 @@
                                                     <asp:SqlDataSource ID="SUM" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT SUM(TONGTIEN)FROM CART;"></asp:SqlDataSource>
 
                                                 </div>
-                                                <asp:Button ID="btnThanhToan" runat="server" class="btn btn-info btn-block btn-lg" data-mdb-toggle="tooltip" Text="Thanh Toán" OnClick="btnThanhToan_Click" />
-
+                                                <asp:Button ID="btnThanhToan" runat="server" class="btn btn-info btn-block btn-lg pr-3" data-mdb-toggle="tooltip" Text="Thanh Toán" OnClick="btnThanhToan_Click" />
+                                                <asp:Label ID="lbtThongBao" class="mt-3" runat="server">Bạn đã đặt hàng thành công</asp:Label>
                                             </div>
                                         </div>
 

@@ -87,6 +87,15 @@ namespace Cart
         protected global::System.Web.UI.WebControls.Button btnThanhToan;
 
         /// <summary>
+        /// lbtThongBao control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbtThongBao;
+
+        /// <summary>
         /// CART control.
         /// </summary>
         /// <remarks>
